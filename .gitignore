@@ -37,3 +37,7 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+Covariate_stacks/
+Occurrence_data/
+Species_list
