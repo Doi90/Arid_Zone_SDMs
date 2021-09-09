@@ -41,3 +41,9 @@ vignettes/*.pdf
 Covariate_stacks/
 Occurrence_data/
 Species_list
+.Rproj.user
+outputs/
+outputs_orig_kde/
+outputs_2nd_kde/
+Fire/
+Arid_zone_shapefile/
