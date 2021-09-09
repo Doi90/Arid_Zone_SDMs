@@ -66,6 +66,15 @@ spp_data <- bushfireSOS::load_pres_bg_data_arid(filepath = "Occurrence_data/One_
                                                 species = species,
                                                 species_col = species_col)
 
+spp_data1 <- bushfireSOS::load_pres_bg_data(species = "Tiliqua multifasciata",
+                                            email = "david.wilkinson.research@gmail.com",
+                                            save.map = FALSE)
+
+spp_data1$data$species <- species
+
+spp_data$data <- rbind(spp_data$data,
+                       spp_data1$data)
+
 bushfireSOS::map_sp_data(spp_data, 
                          crs = 4326)
 
@@ -92,7 +101,7 @@ env_data <- bushfireSOS::load_arid_env_data(file = "Covariate_stacks/AZM_covaria
 
 # Generate our background points
 
-bias_layer <- raster::raster("Covariate_stacks/kde_h1e7_roads.tif")
+bias_layer <- raster::raster("Covariate_stacks/kde_h1e7_roads_ALA.tif")
 
 spp_data <- bushfireSOS::background_points_arid(species = species,
                                                 spp_data = spp_data,
