@@ -38,8 +38,8 @@ module load rgdal/1.4-4-r-3.6.0
 module load geos/3.7.2-python-3.7.4
 module load netcdf/4.7.1
 module load nodejs
+module load openssl
 module load r/3.6.0
-
 export http_proxy=http://wwwproxy.unimelb.edu.au:8000
 export https_proxy=$http_proxy
 export ftp_proxy=$http_proxy
